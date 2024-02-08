@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+   <script type="text/babel">
+    
+class FunPer extends React.Component{
+    state={
+        age:21,
+        user:{
+            name:"mohammed ezzaim",
+            faculte:"FSTG"
+        },
+        country:"morroco",
+        x:0
+    }
+     Increment(){
+        this.setState({ x:this.state.x+1});
+    }
+    render(){
+        return(
+        <div>
+            <h1>{this.state.user.name} <br></br>{this.state.user.faculte}<br></br>{this.state.age}<br></br>
+            {this.state.country}</h1>
+            <h1>{this.state.x}</h1>
+           <h1> this.Increment.bind(this) behal tatkol l editeur yetsamh like me3a this ou yeftoha me3a dans la fonction Increment this 
+            ma3ndha ta me3na</h1>
+            <button onClick={this.Increment.bind(this)}>Increment</button>
+            <button onClick={()=>{
+                this.setState({
+                    x:this.state.x-1
+                });
+            }}>Decremente</button>
+            
+        </div>
+    );
+    }
+    
+}
+
+ ReactDOM.render(<FunPer/>,document.getElementById("root"));
+   </script>
+</body>
+</html>

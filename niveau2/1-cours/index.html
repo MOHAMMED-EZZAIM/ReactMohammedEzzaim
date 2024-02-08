@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <ul id="list"></ul>
+    <div id="root"></div>
+    <div id="di"></div>
+    <div id="nvdiv" style="background-color: red;"></div>
+
+    <!-- <script>
+        const elment1=document.createElement("li");
+        elm.innerHTML="Morroccoo";
+        let list =document.getElementById("list");
+        list.appendChild(elment1);
+
+        const elment2=React.createElement(
+            "p",
+            {ClassName: "title"},
+            "hello mohammed ezzaim"
+        );
+        ReactDOM.render(elment2,document.getElementById("root"));
+
+        const elment3=React.createElement(
+            "ul",
+            {id:"lits"},
+            React.createElement(
+                "li",
+                null,
+                "morrocco"
+                ),
+            React.createElement(
+                "li",
+                null,
+                "Tunnisine"
+                ));
+        ReactDOM.render(elment3,document.getElementById("di"));
+        // cette code JSX
+        
+    </script> -->
+        <script type="text/babel">
+        const elmentNv=(
+            <ul>
+                <li>JAVA</li>
+                <li>HTML/CSS/JS</li>
+                <li>React</li>
+                <li>PHP</li>
+            </ul>
+            ) ;
+        ReactDOM.render(elmentNv,document.getElementById("nvdiv"));
+        </script>
+</body>
+</html>

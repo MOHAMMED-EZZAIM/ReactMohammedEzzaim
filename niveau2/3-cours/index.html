@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="root"> </div>
+    <div id="root2"></div>
+    <script type="text/babel">
+        function FunHeader(){
+            return (
+                <div>
+                    <h1>hello Header</h1>    
+                </div>   
+                )
+        }
+        function Funfouter(){
+            return (
+                <div>
+                    <h1>hello Footer</h1>
+                    
+                </div>   
+                )
+        }
+        class CalssHomme extends React.Component{
+               render(){
+                return( <div>
+                    <FunHeader/>
+                    <Funfouter/>
+                    <FunHeader/>
+                    <Funfouter/>
+                    <FunHeader/>
+                    <Funfouter/>
+                    <FunHeader/>
+                    <Funfouter/>
+                </div>)
+               
+                  
+              
+               }
+            
+        }
+
+    ReactDOM.render(<CalssHomme/>,document.getElementById("root"));
+    </script>
+</body>
+</html>

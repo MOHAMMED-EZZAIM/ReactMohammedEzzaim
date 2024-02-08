@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+   <script type="text/babel">
+    
+class FunPer extends React.Component{
+    state={
+        profile:{
+            firstaname:"mohammed ",
+            lastname:"ezzaim",
+            age:21
+        },
+        country:" site :mohammed-ezzaim",
+        x:0
+    }
+    //fehadeLhala mochkila kayn fe  fach tatbdle firstaname l5rine tay5tfih ou ye5do null
+    // changname=(e)=>{
+    //     this.setState({
+    //         profile:{
+    //             firstaname:e.target.value
+    // }});}
+
+
+    //mochkila fehade la solusion hiya tewila 5ase chi haja faka ES6 hiya lhal 
+    // changname=(e)=>{
+    //     this.setState({
+    //         profile:{
+    //             firstaname:e.target.value,
+    //             lastname:this.state.profile.lastname,
+    //             age:this.state.profile.age
+    // }});}
+
+    // hadi hiya la super solusion
+    changname=(e)=>{
+        this.setState({
+            profile:{
+                ...this.state.profile=this.state.profile,
+                firstaname:e.target.value,
+               
+    }});}
+    render(){
+        return(
+        <div>
+            <h1>{this.state.profile.firstaname} </h1>
+            <h1>{this.state.profile.lastname}</h1>
+            <h1>{this.state.profile.age}</h1>
+
+            <input type="text" onChange={this.changname} />
+        </div>
+    );}
+}
+ ReactDOM.render(<FunPer/>,document.getElementById("root"));
+   </script>
+</body>
+</html>

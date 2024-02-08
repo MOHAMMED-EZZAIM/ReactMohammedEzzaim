@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+   <script type="text/babel">
+     function  ChildME (props){
+        return(
+            <h1>i am child , le nom ={props.name}, L'age={props.age}, commentaire={props.children}</h1>
+        )
+    }
+    //mohammed Object quelconque
+    // function  ChildME (mohammed){
+    //     return(
+    //         <h1>i am child , le nom ={mohammed.name}, L'age={mohammed.age}</h1>
+    //     )
+    // }
+    class Car extends React.Component {
+//   render(props) {
+     render() {
+    return <h2>Hi, I am a Car! {this.props.name}, {this.props.version}</h2>;
+  }
+}
+function FunPer(){
+    return(
+        <div>
+            <h1>i am Father</h1>
+            <ChildME name="lina zare" age={2}>mohammed is th best</ChildME>
+            <Car name="dacia" version={2019}/>
+        </div>
+    );
+}
+
+ ReactDOM.render(<FunPer/>,document.getElementById("root"));
+   </script>
+</body>
+</html>

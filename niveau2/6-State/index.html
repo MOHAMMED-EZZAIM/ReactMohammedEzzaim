@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+   <script type="text/babel">
+    
+
+class About extends React.Component{
+    render(){
+        return (
+            <>
+              <h1>Props attributs:{this.props.data.age}</h1>
+              <h1>Props attributs:{this.props.data.country}</h1>
+              <h1>Props attributs:{this.props.data.user.name}</h1>
+              <h1>Props attributs:{this.props.data.user.faculte}</h1>
+            </>
+        )
+       
+        
+         
+    }
+}
+function Func(){
+    // cette un variable normal 
+    let mohammed={
+        age:10,
+        name:"mohammed ezzaim",
+        faculte:"FSTG"
+    }
+    // let State={
+    //     age:10,
+    //     name:"mohammed ezzaim",
+    //     faculte:"FSTG"
+    // }
+    return(
+        <h1>{mohammed.age}</h1>
+
+    );
+}
+class FunPer extends React.Component{
+    State={
+        age:21,
+        user:{
+            name:"mohammed ezzaim",
+            faculte:"FSTG"
+        },
+        country:"morroco"
+    }
+    render(){
+        return(
+        <div>
+            <h1>{this.State.user.name} <br></br>{this.State.user.faculte}<br></br>{this.State.age}<br></br>
+            {this.State.country}</h1>
+            <About data={this.State}/>
+            <Func/>
+        </div>
+    );
+    }
+    
+}
+
+ ReactDOM.render(<FunPer/>,document.getElementById("root"));
+   </script>
+</body>
+</html>
