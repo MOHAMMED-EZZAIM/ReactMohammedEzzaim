@@ -1,0 +1,67 @@
+.Classlink{
+    text-decoration: none;
+    color: aqua;
+    background-color: blue;
+    margin-left: 200px;
+    padding: 5px;
+    margin-right: 0px;
+
+}
+button{
+    background-color: rgb(3, 248, 223);
+    padding: 15px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold
+}
+button:hover{
+    opacity: 0.8;
+    box-shadow: 2px 2px 2px 2px;
+}
+button:active{
+    opacity: 0.6;
+    color:white;
+
+}
+div .About,.Contact,.Details,.home,.profile,.Contact{
+    margin: 30px;
+    background-size: cover;
+    width: 1300px;
+    height: 1300px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+div .About{
+  
+    background-color: red;
+    
+    
+}
+div .Contact{
+    background-color: black
+  
+    
+}div .Details{
+    background-color: gold;
+}div .home{
+    background-color: rgb(42, 176, 15);
+}
+div .profile{
+    background-color: rgb(217, 26, 235);
+}
+.btns {
+    background-color: black;
+    padding: 5px;
+    margin-right: 0px;
+    margin: 30px;
+    background-size: cover;
+    width: 1300px;
+    height: 1300px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
